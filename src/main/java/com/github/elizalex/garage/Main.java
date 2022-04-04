@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 
-// Приложение будет запускаться через main. Потом разберусь что да как и почему не  через GarageApplication
+// Приложение будет запускаться через main. Потом разберусь почему не  через GarageApplication
 @SpringBootApplication
 public class Main extends SpringBootServletInitializer {
     @Override
