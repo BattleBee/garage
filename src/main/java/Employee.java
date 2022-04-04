@@ -2,8 +2,11 @@
  * Работник. Поля - имя, фамилия, id, возраст, опыт работы
  */
 public class Employee {
-    private int id, age, experience;
-    private String name, surname, specialization;
+    private int id;
+    private int age;
+    private String name;
+    private String surname;
+    private String specialization;
 
     public Employee(int id, String name, String surname, int age, String specialization) {
         this.id = id;
@@ -56,23 +59,20 @@ public class Employee {
 
     public void installDetail(Car car, Detail detail, Employee employee) {
 
-
     }
 
     public void removeDetail(Car car, Detail detail, Employee employee) {
 
     }
 
-
     @Override
     public String toString() {
-        return "Employee{" +
-                "id=" + id +
-                ", age=" + age +
-                ", experience=" + experience +
-                ", name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", specialization='" + specialization + '\'' +
-                '}';
+        return "Employee{"
+                + "id=" + id
+                + ", age=" + age
+                + ", name='" + name + '\''
+                + ", surname='" + surname + '\''
+                + ", specialization='" + specialization + '\''
+                + '}';
     }
 }

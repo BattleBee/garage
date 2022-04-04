@@ -2,8 +2,11 @@
  * Деталь. Поля - id, стоимость(руб), наименование, страна производитель, гарантия(мес)
  */
 public class Detail {
-    private int  id, price, warranty;
-    private String name, madeIn;
+    private int id;
+    private int price;
+    private int warranty;
+    private String name;
+    private String madeIn;
 
     public Detail(int id, String name, String madeIn, int price, int warranty) {
         this.id = id;
@@ -55,12 +58,12 @@ public class Detail {
 
     @Override
     public String toString() {
-        return "Detail{" +
-                "id=" + id +
-                ", price=" + price +
-                ", warranty=" + warranty +
-                ", name='" + name + '\'' +
-                ", madeIn='" + madeIn + '\'' +
-                '}';
+        return "Detail{"
+                + "id=" + id
+                + ", price=" + price
+                + ", warranty=" + warranty
+                + ", name='" + name + '\''
+                + ", madeIn='" + madeIn + '\''
+                + '}';
     }
 }

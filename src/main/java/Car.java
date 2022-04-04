@@ -3,10 +3,13 @@
  * Машина. Поля - id, марка, цвет, год выпуска, пробег(км).
  */
 public class Car {
-    private int id, year, mileage;
-    private String brand, color;
+    private int id;
+    private int year;
+    private int mileage;
+    private String brand;
+    private String color;
 
-    public Car(int id, String brand, String color,int year,  int mileage) {
+    public Car(int id, String brand, String color, int year,  int mileage) {
         this.id = id;
         this.brand = brand;
         this.color = color;
@@ -54,15 +57,14 @@ public class Car {
         this.year = year;
     }
 
-
     @Override
     public String toString() {
-        return "Car{" +
-                "id=" + id +
-                ", year=" + year +
-                ", mileage=" + mileage +
-                ", brand='" + brand + '\'' +
-                ", color='" + color + '\'' +
-                '}';
+        return "Car{"
+                + "id=" + id
+                + ", year=" + year
+                + ", mileage=" + mileage
+                + ", brand='" + brand + '\''
+                + ", color='" + color + '\''
+                + '}';
     }
 }

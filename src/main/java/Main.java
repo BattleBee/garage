@@ -9,7 +9,5 @@ public class Main {
         Employee ivan = new Employee(1, "Иван", "Дроздов", 21, "Кузовщик");
         Detail battery = new Detail(1, "Аккумулятор", "Япония", 5000, 24);
         Detail windshield = new Detail(1, "Лобовое стекло", "Германия", 7000, 6);
-
-
     }
 }
