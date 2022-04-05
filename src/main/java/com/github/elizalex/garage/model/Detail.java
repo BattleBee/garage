@@ -10,20 +10,20 @@ import javax.persistence.Table;
 @Table(name = "detail")
 public class Detail {
     private int id;
-    private int price;
-    private int warranty;
-    private String name;
-    private String madeIn;
+    String name;
+    private Car installOn;
+    private Car removeFrom;
+    private Employee usedBy;
+
 
     @Override
     public String toString() {
         return "Detail{"
                 + "id=" + id
-                + ", price=" + price
-                + ", warranty=" + warranty
                 + ", name='" + name + '\''
-                + ", madeIn='" + madeIn + '\''
+                + ", installOn=" + installOn
+                + ", removeFrom=" + removeFrom
+                + ", usedBy=" + usedBy
                 + '}';
     }
-
 }
