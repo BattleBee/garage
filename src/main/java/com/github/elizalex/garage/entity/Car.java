@@ -29,5 +29,5 @@ public class Car {
     private int mileage;
 
     @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "detail_installOn")
+    @JoinColumn(name = "installed_detail")
     private List<Detail> detailsOnCar;

@@ -20,11 +20,11 @@ public class Detail {
     String country;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "detail_installOn")
+    @JoinColumn(name = "installed_detail")
     private Car installOn;
 
     @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "employee_id")
+    @JoinColumn(name = "last_touch")
     private Employee usedBy;
 
 }
