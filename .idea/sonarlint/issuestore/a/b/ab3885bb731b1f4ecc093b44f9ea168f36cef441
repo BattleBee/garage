@@ -1,0 +1,14 @@
+
+^
+java:S2094"BRemove this empty class, write its code or make it an "interface".(»‰à|8æ¸¯éÿ/
+]	java:S125"<This block of commented-out lines of code should be removed.(»ž•ûÿÿÿÿ8ï¸¯éÿ/
+_
+java:S1128"BRemove this unused import 'com.github.elizalex.garage.entity.Car'.(ŸÏö“8ð¸¯éÿ/
+T
+java:S1128"2Remove this unused import 'org.hibernate.Session'.(È¹›§ùÿÿÿÿ8ð¸¯éÿ/
+[
+java:S1128"9Remove this unused import 'org.hibernate.SessionFactory'.(ñ¦«¬þÿÿÿÿ8ñ¸¯éÿ/
+Y
+java:S1128"<Remove this unused import 'org.hibernate.cfg.Configuration'.(ö¬ä8ñ¸¯éÿ/
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ñ¸¯éÿ/

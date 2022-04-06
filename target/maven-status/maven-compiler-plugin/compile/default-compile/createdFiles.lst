@@ -1,0 +1,6 @@
+com/github/elizalex/garage/Main.class
+com/github/elizalex/garage/model/Employee.class
+com/github/elizalex/garage/repository/UserRepository.class
+com/github/elizalex/garage/model/Detail.class
+com/github/elizalex/garage/model/Car.class
+com/github/elizalex/garage/model/Service.class
