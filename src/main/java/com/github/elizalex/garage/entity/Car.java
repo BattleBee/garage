@@ -31,3 +31,5 @@ public class Car {
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "installed_detail")
     private List<Detail> detailsOnCar;
+
+}
