@@ -12,7 +12,7 @@ public class Detail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "detail_id")
-    private int id;
+    private Long id;
 
     @Column(name = "detail_name")
     String name;
