@@ -32,10 +32,10 @@ public class CarController {
         return "car-create";
     }
 
-    @PostMapping
+    @PostMapping("/car-create")
     public String createCar(Car car) {
         carService.saveCar(car);
-        return "/redirect:/cars";
+        return "redirect:/cars";
 
     }
 }
