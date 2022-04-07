@@ -20,12 +20,12 @@ public class Detail {
     @Column(name = "detail_country")
     String country;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "installed_detail")
+    @ManyToOne(cascade = CascadeType.ALL, optional = false)
+    @JoinColumn(referencedColumnName = "car_id")
     private Car installOn;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "last_touch")
+    @ManyToOne(cascade = CascadeType.ALL, optional = false)
+    @JoinColumn(referencedColumnName = "employee_id")
     private Employee usedBy;
 
 }

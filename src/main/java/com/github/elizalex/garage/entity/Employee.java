@@ -28,7 +28,7 @@ public class Employee {
     private String specialization;
 
     @OneToMany(cascade = CascadeType.ALL,
-            mappedBy = "last_touch" )
+            mappedBy = "installOn" )
     private List<Detail> detailsDone;
 
 

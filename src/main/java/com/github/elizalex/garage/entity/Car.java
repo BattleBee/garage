@@ -28,8 +28,8 @@ public class Car {
     @Column(name = "car_mileage")
     private int mileage;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "installed_detail")
-    private List<Detail> detailsOnCar;
+    @OneToMany(cascade = CascadeType.ALL,
+            mappedBy = "usedBy" )
+    private List<Detail> installed_detail;
 
 }
