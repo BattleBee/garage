@@ -1,12 +1,4 @@
-CREATE TABLE IF NOT EXISTS cars
-(
-    car_id SERIAL PRIMARY KEY,
-    car_brand  VARCHAR(50) NOT NULL,
-    car_color VARCHAR(50) NOT NULL,
-    car_year int NOT NULL,
-    car_mileage int NOT NULL
 
-);
 
 INSERT INTO cars (car_brand, car_color, car_year,car_mileage )  VALUES
 ('BMW', 'RED', 2019, 50000),
@@ -22,15 +14,6 @@ INSERT INTO cars (car_brand, car_color, car_year,car_mileage )  VALUES
 
 SELECT * FROM cars;
 
-CREATE TABLE IF NOT EXISTS employees
-(
-    employee_id SERIAL PRIMARY KEY,
-    employee_name  VARCHAR(50) NOT NULL,
-    employee_surname VARCHAR(50) NOT NULL,
-    employee_age int NOT NULL,
-    employee_specialization VARCHAR(50) NOT NULL
-
-);
 
 INSERT INTO employees (employee_name, employee_surname, employee_age,employee_specialization )  VALUES
 ('Ivan', 'Ivanov', 2001, 'electrik'),
@@ -41,12 +24,6 @@ INSERT INTO employees (employee_name, employee_surname, employee_age,employee_sp
 
 SELECT * FROM employees;
 
-CREATE TABLE IF NOT EXISTS details
-(
-    detail_id SERIAL PRIMARY KEY,
-    detail_name  VARCHAR(50) NOT NULL,
-    detail_country VARCHAR(50) NOT NULL
-);
 
 INSERT INTO details (detail_name, detail_country)  VALUES
 ('Лобовое стекло', 'Россия'),
