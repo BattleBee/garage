@@ -1,9 +1,7 @@
 package com.github.elizalex.garage.entity;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
+
 
 import javax.persistence.*;
 import java.util.List;
@@ -16,7 +14,7 @@ public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "employee_id")
-    private Long id;
+    private int id;
 
     @Column(name = "employee_name")
     private String name;

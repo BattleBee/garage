@@ -1,9 +1,6 @@
 package com.github.elizalex.garage.entity;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 
 import javax.persistence.*;
 
@@ -15,7 +12,7 @@ public class Detail {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "detail_id")
-    private Long id;
+    private int id;
 
     @Column(name = "detail_name")
     String name;

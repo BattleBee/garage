@@ -1,14 +1,14 @@
 package com.github.elizalex.garage.dao;
 
 import com.github.elizalex.garage.entity.Car;
-import com.github.elizalex.garage.entity.Employee;
 import lombok.RequiredArgsConstructor;
 import org.hibernate.Session;
-import org.hibernate.query.Query;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import java.util.List;
 
 @Controller
@@ -20,31 +20,29 @@ public class CarDAOImpl implements CarDAO {
 
     @Override
     public List<Car> getAllCars() {
-        Session session = entityManager.unwrap(Session.class); // создаем сессию с БД
-        Query<Car> query = session.createQuery("from Car", Car.class);
+        Query query = entityManager.createQuery("from Car");
         List<Car> allCars = query.getResultList();
         return allCars;
     }
 
     @Override
     public void saveCar(Car car) {
-        Session session = entityManager.unwrap(Session.class);
-        session.saveOrUpdate(car);
+        Car newCar = entityManager.merge(car);
+        car.setId(newCar.getId());
     }
 
     @Override
     public Car getCar(int id) {
-        Session session = entityManager.unwrap(Session.class);
-        return session.get(Car.class, id);
+        Car car = entityManager.find(Car.class, id);
+        return car;
     }
 
     @Override
     public void deleteCar(int id) {
-        Session session = entityManager.unwrap(Session.class);
-        Query<Car> query = session.createQuery("delete from Car"
-                + "were id = :car_id"); // проверить запрос
-        query.setParameter("car_id", id);
-        query.executeUpdate();
+        Query query = entityManager.createQuery("delete from Car"
+                + "were id = :car_id"); // создаем  запрос на удаление по id (проверить)
+        query.setParameter("car_id", id); // этот id в параметрах
+        query.executeUpdate(); // выполняем запрос
     }
 
 }
