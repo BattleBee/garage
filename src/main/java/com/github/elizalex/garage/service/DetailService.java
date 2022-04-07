@@ -1,20 +1,19 @@
 package com.github.elizalex.garage.service;
 
 import com.github.elizalex.garage.entity.Detail;
-import com.github.elizalex.garage.entity.Employee;
 import com.github.elizalex.garage.repository.DetailRepository;
-import com.github.elizalex.garage.repository.EmployeeRepository;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
+@Slf4j
+@RequiredArgsConstructor
 public class DetailService {
-    private final DetailRepository detailRepository;
 
-    @Autowired
-    public DetailService(DetailRepository detailRepository) {
-        this.detailRepository = detailRepository;
-    }
+    private final DetailRepository detailRepository;
 
     public Detail findById(Long id) {
         return detailRepository.findById(id).orElse(null);
@@ -24,7 +23,8 @@ public class DetailService {
         return detailRepository.findAll();
     }
 
-    public Detail saveEmployee(Detail detail) {
+    public Detail saveDetail(Detail detail) {
+        log.info("Saving new {}", detail);
         return detailRepository.save(detail);
     }
 
