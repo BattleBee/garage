@@ -8,10 +8,10 @@ public interface CarDAO {
 
     List<Car> getAllCars();
 
-//     void saveCar();
-//
-//     Car getCar();
-//
-//     void deleteCar();
+     void saveCar(Car car);
+
+     Car getCar(int id);
+
+     void deleteCar(int id);
 
 }

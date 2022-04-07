@@ -1,7 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.github.elizalex.garage.GarageApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.477 s <<< FAILURE! - in com.github.elizalex.garage.GarageApplicationTests
-com.github.elizalex.garage.GarageApplicationTests  Time elapsed: 0.476 s  <<< ERROR!
-java.lang.IllegalStateException: Found multiple @SpringBootConfiguration annotated classes [Generic bean: class [com.github.elizalex.garage.GarageApplication]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [/Users/mac/Desktop/Java/projects/garage/target/classes/com/github/elizalex/garage/GarageApplication.class], Generic bean: class [com.github.elizalex.garage.Main]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [/Users/mac/Desktop/Java/projects/garage/target/classes/com/github/elizalex/garage/Main.class]]
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 7.009 s - in com.github.elizalex.garage.GarageApplicationTests
