@@ -19,7 +19,6 @@ public class CarDAOImpl implements CarDAO {
     @Override
     public List<Car> getAllCars() {
         Session session = entityManager.unwrap(Session.class); // создаем сессию с БД
-
         Query query = session.createQuery("from Car", Car.class);
         List<Car> allCars = query.getResultList();
         return allCars;
