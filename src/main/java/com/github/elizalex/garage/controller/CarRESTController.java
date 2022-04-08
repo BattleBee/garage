@@ -14,10 +14,10 @@ public class CarRESTController {
     @Autowired
     private CarService carService;
 
-//    @RequestMapping("/")
-//    public String showFirstView() {
-//        return "To show all cars try - http://localhost:8080/api/cars";
-//    }
+    @RequestMapping("/")
+    public String showFirstView() {
+        return "To show all cars try - http://localhost:8080/api/cars";
+    }
 
     @GetMapping("/cars")
     public List<Car> showAllCars() {

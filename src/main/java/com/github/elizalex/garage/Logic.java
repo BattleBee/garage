@@ -13,27 +13,26 @@ public class Logic {
     private EntityManager entityManager;
 
 
-//    public void addDetailToCar(Car car, Detail detail, Employee employee) {
-//        int detailId = detail.getId();
-//        int carId = car.getId();
-//        int employeeId = employee.getId();
-//        Query query = entityManager.createQuery("update details set installOn = :carId, "
-//                + "usedBy = :employeeId were detail_id = :detailId"); // создаем  запрос
-//        query.setParameter("detail_id", detailId);
-//        query.executeUpdate(); // выполняем запрос
-//
-//    }
-//
-//    public void removeDetailFromCar(Car car, Detail detail, Employee employee) {
-//        int detailId = detail.getId();
-//        int carId = car.getId(); // пока не решил нужно ли это
-//        int employeeId = employee.getId();
-//        Query query = entityManager.createQuery("update details set installOn = :null, "
-//                + "usedBy = :employeeId were id = :detailId");
-//        query.setParameter("detail_id", detailId);
-//        query.executeUpdate();
-//
-//    }
+    public void addDetailToCar(Car car, Detail detail, Employee employee) {
+        int detailId = detail.getId();
+        int carId = car.getId();
+        int employeeId = employee.getId();
+        Query query = entityManager.createQuery("update details set installOn = :carId, "
+                + "usedBy = :employeeId were detail_id = :detailId"); // создаем  запрос
+        query.setParameter("detail_id", detailId);
+        query.executeUpdate(); // выполняем запрос
+
+    }
+
+    public void removeDetailFromCar(Car car, Detail detail, Employee employee) {
+        int detailId = detail.getId();
+        int employeeId = employee.getId();
+        Query query = entityManager.createQuery("update details set installOn = :null, "
+                + "usedBy = :employeeId were id = :detailId");
+        query.setParameter("detail_id", detailId);
+        query.executeUpdate();
+
+    }
 
 
 
