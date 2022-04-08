@@ -14,11 +14,6 @@ public class DetailRESTController {
     @Autowired
     private DetailService detailService;
 
-    @RequestMapping("/")
-    public String showFirstView() {
-        return "To show all cars try - http://localhost:8080/api/details";
-    }
-
     @GetMapping("/detail")
     public List<Detail> showAllDetails() {
         List<Detail> allDetails = detailService.getAllDetails();
