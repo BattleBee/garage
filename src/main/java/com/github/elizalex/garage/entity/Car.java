@@ -27,7 +27,7 @@ public class Car {
     private int mileage;
 
     @OneToMany(cascade = CascadeType.ALL,
-            mappedBy = "usedBy" )
+            mappedBy = "installOn" )
     private List<Detail> installed_detail;
 
 }

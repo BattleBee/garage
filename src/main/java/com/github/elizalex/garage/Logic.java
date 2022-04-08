@@ -17,8 +17,8 @@ public class Logic {
         int detailId = detail.getId();
         int carId = car.getId();
         int employeeId = employee.getId();
-        Query query = entityManager.createQuery("update details set car_id = :carId, "
-                + "employee_id = :employeeId were id = :detailId"); // создаем  запрос
+        Query query = entityManager.createQuery("update details set installOn = :carId, "
+                + "usedBy = :employeeId were detail_id = :detailId"); // создаем  запрос
         query.setParameter("detail_id", detailId);
         query.executeUpdate(); // выполняем запрос
 
@@ -28,8 +28,8 @@ public class Logic {
         int detailId = detail.getId();
         int carId = car.getId(); // пока не решил нужно ли это
         int employeeId = employee.getId();
-        Query query = entityManager.createQuery("update details set car_id = :null, "
-                + "employee_id = :employeeId were id = :detailId");
+        Query query = entityManager.createQuery("update details set installOn = :null, "
+                + "usedBy = :employeeId were id = :detailId");
         query.setParameter("detail_id", detailId);
         query.executeUpdate();
 
