@@ -3,10 +3,10 @@ package com.github.elizalex.garage;
 import com.github.elizalex.garage.entity.Car;
 import com.github.elizalex.garage.entity.Detail;
 import com.github.elizalex.garage.entity.Employee;
-import org.hibernate.Session;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.persistence.EntityManager;
+import javax.persistence.Query;
 
 public class Logic {
 
@@ -14,9 +14,26 @@ public class Logic {
 //    private EntityManager entityManager;
 //
 //
-//    Session session = entityManager.unwrap(Session.class);
-//
 //    public void addDetailToCar(Car car, Detail detail, Employee employee) {
-//        car.addDetailToCar(detail,employee);
+//        int detailId = detail.getId();
+//        int carId = car.getId();
+//        int employeeId = employee.getId();
+//        Query query = entityManager.createQuery("update details set car_id = :carId, "
+//                + "employee_id = :employeeId were id = :detailId"); // создаем  запрос
+//        query.setParameter("detail_id", detailId);
+//        query.executeUpdate(); // выполняем запрос
+//
 //    }
+//
+//    public void removeDetailFromCar(Car car, Detail detail, Employee employee) {
+//        int detailId = detail.getId();
+//        int carId = car.getId(); // пока не решил нужно ли это
+//        int employeeId = employee.getId();
+//        Query query = entityManager.createQuery("update details set car_id = :null, "
+//                + "employee_id = :employeeId were id = :detailId");
+//        query.setParameter("detail_id", detailId);
+//        query.executeUpdate();
+//
+//    }
+
 }
