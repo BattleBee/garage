@@ -50,7 +50,4 @@ public class CarRESTController {
         return "Car with id = " + id + " was deleted";
     }
 
-
-
-
 }

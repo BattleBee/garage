@@ -5,7 +5,7 @@ import com.github.elizalex.garage.entity.Detail;
 import java.util.List;
 
 public interface DetailDAO {
-    List<Detail> getDetail();
+    List<Detail> getAllDetails();
 
     void saveDetail(Detail detail);
 

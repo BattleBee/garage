@@ -13,7 +13,7 @@ public class DetailDAOImpl implements DetailDAO{
     private EntityManager entityManager;
 
     @Override
-    public List<Detail> getDetail() {
+    public List<Detail> getAllDetails() {
         Query query = entityManager.createQuery("from Detail");
         List<Detail> allDetails = query.getResultList();
         return allDetails;

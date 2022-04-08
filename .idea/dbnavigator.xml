@@ -17,7 +17,7 @@
       <scope value="GLOBAL" />
       <destination value="FILE" />
       <format value="EXCEL" />
-      <charset value="UTF-8" />
+      <charset value="windows-1251" />
     </export-instructions>
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
@@ -28,7 +28,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="923af1ad-ce50-419a-b7f3-0d66dd513934">
-      <console name="Connection" type="STANDARD" schema="public" session="Main"><![CDATA[SELECT * FROM cars;]]></console>
+      <console name="Connection" type="STANDARD" schema="public" session="Main">SELECT * FROM cars;</console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -88,7 +88,7 @@
           <database value="garage" />
           <type value="USER_PASSWORD" />
           <user value="postgres" />
-          <deprecated-pwd value="cGFzc3dvcmQ=" />
+          <deprecated-pwd value="" />
         </database>
         <properties>
           <auto-commit value="false" />

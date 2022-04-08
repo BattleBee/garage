@@ -14,7 +14,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     private EntityManager entityManager;
 
     @Override
-    public List<Employee> getAllEmployee() {
+    public List<Employee> getAllEmployees() {
         Query query = entityManager.createQuery("from Employee");
         List<Employee> allEmployees = query.getResultList();
         return allEmployees;
