@@ -1,9 +1,7 @@
 package com.github.elizalex.garage.dao;
 
-import com.github.elizalex.garage.entity.Car;
 import com.github.elizalex.garage.entity.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import java.util.List;
@@ -14,7 +12,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     private EntityManager entityManager;
 
     @Override
-    public List<Employee> getAllEmployee() {
+    public List<Employee> getAllEmployees() {
         Query query = entityManager.createQuery("from Employee");
         List<Employee> allEmployees = query.getResultList();
         return allEmployees;

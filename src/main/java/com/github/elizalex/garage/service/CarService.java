@@ -2,7 +2,6 @@ package com.github.elizalex.garage.service;
 
 import com.github.elizalex.garage.entity.Car;
 
-import javax.transaction.Transactional;
 import java.util.List;
 
 public interface CarService {

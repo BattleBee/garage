@@ -2,7 +2,6 @@ package com.github.elizalex.garage.dao;
 
 import com.github.elizalex.garage.entity.Detail;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import java.util.List;
@@ -13,7 +12,7 @@ public class DetailDAOImpl implements DetailDAO{
     private EntityManager entityManager;
 
     @Override
-    public List<Detail> getDetail() {
+    public List<Detail> getAllDetails() {
         Query query = entityManager.createQuery("from Detail");
         List<Detail> allDetails = query.getResultList();
         return allDetails;

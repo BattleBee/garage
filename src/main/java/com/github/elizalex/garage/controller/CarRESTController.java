@@ -1,6 +1,5 @@
 package com.github.elizalex.garage.controller;
 
-
 import com.github.elizalex.garage.entity.Car;
 import com.github.elizalex.garage.service.CarService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,16 +8,16 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api")  //  81 урок 4 минута - url будет содержать "/api"
+@RequestMapping("/api")
 public class CarRESTController {
 
     @Autowired
     private CarService carService;
 
-    @RequestMapping("/")
-    public String showFirstView() {
-        return "To show all cars try - http://localhost:8080/api/cars";
-    }
+//    @RequestMapping("/")
+//    public String showFirstView() {
+//        return "To show all cars try - http://localhost:8080/api/cars";
+//    }
 
     @GetMapping("/cars")
     public List<Car> showAllCars() {
@@ -49,8 +48,5 @@ public class CarRESTController {
         carService.deleteCar(id);
         return "Car with id = " + id + " was deleted";
     }
-
-
-
 
 }

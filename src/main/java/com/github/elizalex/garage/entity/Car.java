@@ -1,7 +1,6 @@
 package com.github.elizalex.garage.entity;
 
 import lombok.Data;
-
 import javax.persistence.*;
 import java.util.List;
 
@@ -28,7 +27,7 @@ public class Car {
     private int mileage;
 
     @OneToMany(cascade = CascadeType.ALL,
-            mappedBy = "usedBy" )
+            mappedBy = "installOn" )
     private List<Detail> installed_detail;
 
 }

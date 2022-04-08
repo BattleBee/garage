@@ -1,7 +1,6 @@
 package com.github.elizalex.garage.entity;
 
 import lombok.Data;
-
 import javax.persistence.*;
 
 @Data

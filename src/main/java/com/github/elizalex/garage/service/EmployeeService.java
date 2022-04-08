@@ -1,35 +1,16 @@
 package com.github.elizalex.garage.service;
 
-
 import com.github.elizalex.garage.entity.Employee;
-import com.github.elizalex.garage.repository.EmployeeRepository;
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
 
-@Service
-@Slf4j
-@RequiredArgsConstructor
-public class EmployeeService {
+public interface EmployeeService {
 
-    private final EmployeeRepository employeeRepository;
+    List<Employee> getAllEmployees();
 
-    public Employee findById(Long id) {
-        return employeeRepository.findById(id).orElse(null);
-    }
+    void saveEmployee(Employee employee);
 
-    public List<Employee> findAllEmployee() {
-        return employeeRepository.findAll();
-    }
+    Employee getEmployee(int id);
 
-    public Employee saveEmployee(Employee employee) {
-        log.info("Saving new {}", employee);
-        return employeeRepository.save(employee);
-    }
-
-    public void deleteById(Long id) {
-        employeeRepository.deleteById(id);
-    }
+    void deleteEmployee(int id);
 }

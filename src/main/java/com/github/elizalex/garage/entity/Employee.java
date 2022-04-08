@@ -1,8 +1,6 @@
 package com.github.elizalex.garage.entity;
 
 import lombok.Data;
-
-
 import javax.persistence.*;
 import java.util.List;
 
@@ -29,8 +27,7 @@ public class Employee {
     private String specialization;
 
     @OneToMany(cascade = CascadeType.ALL,
-            mappedBy = "installOn" )
+            mappedBy = "usedBy" )
     private List<Detail> detailsDone;
-
 
 }
