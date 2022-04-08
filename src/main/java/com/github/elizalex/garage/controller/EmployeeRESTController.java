@@ -14,10 +14,10 @@ public class EmployeeRESTController {
     @Autowired
     private EmployeeService employeeService;
 
-    @RequestMapping("/")
-    public String showFirstView() {
-        return "To show all employees try - http://localhost:8080/api/employees";
-    }
+//    @RequestMapping("/")
+//    public String showFirstView() {
+//        return "To show all employees try - http://localhost:8080/api/employees";
+//    }
 
     @GetMapping("/employees")
     public List<Employee> showAllEmployees() {

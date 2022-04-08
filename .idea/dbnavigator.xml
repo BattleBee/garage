@@ -28,7 +28,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="923af1ad-ce50-419a-b7f3-0d66dd513934">
-      <console name="Connection" type="STANDARD" schema="public" session="Main">SELECT * FROM cars;</console>
+      <console name="Connection" type="STANDARD" schema="public" session="Main"><![CDATA[SELECT * FROM cars;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
@@ -78,7 +78,7 @@
           <description value="" />
           <database-type value="POSTGRES" />
           <config-type value="BASIC" />
-          <database-version value="13.3" />
+          <database-version value="14.2" />
           <driver-source value="BUILTIN" />
           <driver-library value="" />
           <driver value="" />

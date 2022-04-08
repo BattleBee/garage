@@ -2,7 +2,6 @@ package com.github.elizalex.garage.dao;
 
 import com.github.elizalex.garage.entity.Detail;
 import org.springframework.beans.factory.annotation.Autowired;
-
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import java.util.List;

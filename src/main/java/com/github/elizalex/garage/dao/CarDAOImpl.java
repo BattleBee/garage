@@ -2,11 +2,8 @@ package com.github.elizalex.garage.dao;
 
 import com.github.elizalex.garage.entity.Car;
 import lombok.RequiredArgsConstructor;
-import org.hibernate.Session;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
 import java.util.List;
