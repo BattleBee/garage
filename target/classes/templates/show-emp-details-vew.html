@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<h2>Dear employee,your are WELCOME!!!</h2>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<output>Your name: ${param.employeeName}</output>
+
+
+Your name: ${param.employeeName}
+
+
+</body>
+
+</html>
+
+
+
+
+<!--<!DOCTYPE html>-->
+<!--<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Cars</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--<div th:switch="${cars}">-->
+<!--    <h2 th:case="null">No cars found!</h2>-->
+<!--    <div th:case="*">-->
+<!--        <h2>Cars</h2>-->
+<!--        <table>-->
+<!--            <thead>-->
+<!--            <tr>-->
+<!--                <th>car_id</th>-->
+<!--                <th>car_brand</th>-->
+<!--                <th>car_color</th>-->
+<!--                <th>car_year</th>-->
+<!--                <th>car_mileage</th>-->
+<!--            </tr>-->
+<!--            </thead>-->
+<!--            <tbody>-->
+<!--            <tr th:each="car : ${cars}">-->
+<!--                <td th:text="${car.id}"></td>-->
+<!--                <td th:text="${car.brand}"></td>-->
+<!--                <td th:text="${car.color}"></td>-->
+<!--                <td th:text="${car.year}"></td>-->
+<!--                <td th:text="${car.mileage}"></td>-->
+<!--                <td><a th:href="@{car-update/{id}(id=${car.id})}">Edit</a></td>-->
+<!--                <td><a th:href="@{car-delete/{id}(id=${car.id})}">Delete</a></td>-->
+<!--            </tr>-->
+<!--            </tbody>-->
+<!--        </table>-->
+<!--    </div>-->
+<!--    <p><a href="/car-create">Create car</a></p>-->
+<!--</div>-->
+<!--</body>-->
+<!--</html>-->
