@@ -34,6 +34,19 @@ public class Logic {
 
     }
 
-
-
+    public String printCarWithDetail(Detail detail) {
+        Car car = detail.getInstallOn();
+        Employee employee = detail.getUsedBy();
+        if (car == null) {
+            return "Деталь находится на складе.";
+        } else {
+            String s1;
+            if (employee != null) {
+                s1 = " Деталь установил: " + employee.getName() + " " + employee.getSurname() + "." ;
+            } else {
+                s1 = " Нет сведений о работнике, установившем деталь.";
+            }
+            return  "Деталь установлена на: " + car.getColor() + " " + car.getBrand() + ". " + s1;
+        }
+    }
 }
