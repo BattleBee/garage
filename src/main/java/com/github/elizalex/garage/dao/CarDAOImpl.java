@@ -16,26 +16,25 @@ public class CarDAOImpl implements CarDAO {
     private EntityManager entityManager;
 
     @Override
-    public List<Car> getAllCars() {
+    public List<Car> getAll() {
         Query query = entityManager.createQuery("from Car");
-        List<Car> allCars = query.getResultList();
-        return allCars;
+        return (List<Car>) query.getResultList();
     }
 
     @Override
-    public void saveCar(Car car) {
+    public void save(Car car) {
         Car newCar = entityManager.merge(car);
         car.setId(newCar.getId());
     }
 
     @Override
-    public Car getCar(int id) {
+    public Car get(int id) {
         Car car = entityManager.find(Car.class, id);
         return car;
     }
 
     @Override
-    public void deleteCar(int id) {
+    public void delete(int id) {
         Query query = entityManager.createQuery("delete from Car"
                 + "were id = :car_id"); // создаем  запрос на удаление по id (проверить)
         query.setParameter("car_id", id); // этот id в параметрах

@@ -16,31 +16,31 @@ public class DetailRESTController {
 
     @GetMapping("/detail")
     public List<Detail> showAllDetails() {
-        List<Detail> allDetails = detailService.getAllDetails();
+        List<Detail> allDetails = detailService.getAll();
         return allDetails;
     }
 
     @GetMapping("/details/{id}")
     public Detail getDetail(@PathVariable int id) {
-        Detail detail = detailService.getDetail(id);
+        Detail detail = detailService.get(id);
         return detail;
     }
 
     @PostMapping("/details")
     public Detail addNewDetail(@RequestBody Detail detail) {
-        detailService.saveDetail(detail);
+        detailService.save(detail);
         return detail;
     }
 
     @PutMapping("/details")
     public Detail updateDetail(@RequestBody Detail detail) {
-        detailService.saveDetail(detail);
+        detailService.save(detail);
         return detail;
     }
 
     @DeleteMapping("/details/{id}")
     public String deleteDetail(@PathVariable int id) {
-        detailService.deleteDetail(id);
+        detailService.delete(id);
         return "Detail with id = " + id + " was deleted";
     }
 

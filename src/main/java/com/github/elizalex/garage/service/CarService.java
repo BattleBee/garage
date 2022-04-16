@@ -6,11 +6,11 @@ import java.util.List;
 
 public interface CarService {
 
-    List<Car> getAllCars();
+    List<Car> getAll();
 
-     void saveCar(Car car);
+     void save(Car car);
 
-     Car getCar(int id);
+     Car get(int id);
 
-     void deleteCar(int id);
+     void delete(int id);
 }

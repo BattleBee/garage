@@ -17,7 +17,7 @@
       <scope value="GLOBAL" />
       <destination value="FILE" />
       <format value="EXCEL" />
-      <charset value="windows-1251" />
+      <charset value="UTF-8" />
     </export-instructions>
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
@@ -28,8 +28,8 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="923af1ad-ce50-419a-b7f3-0d66dd513934">
-      <console name="Connection" type="STANDARD" schema="public" session="Main"><![CDATA[SELECT * FROM details;
-update details set detail_installon = 1 , detail_usedby = 3 were detail_id = 3;]]></console>
+      <console name="Connection" type="STANDARD" schema="public" session="Main">SELECT * FROM details;
+update details set detail_installon = 1 , detail_usedby = 3 were detail_id = 3;</console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">

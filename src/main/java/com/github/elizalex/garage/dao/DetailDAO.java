@@ -5,11 +5,11 @@ import com.github.elizalex.garage.entity.Detail;
 import java.util.List;
 
 public interface DetailDAO {
-    List<Detail> getAllDetails();
+    List<Detail> getAll();
 
-    void saveDetail(Detail detail);
+    void save(Detail detail);
 
-    Detail getDetail(int id);
+    Detail get(int id);
 
-    void deleteDetail(int id);
+    void delete(int id);
 }

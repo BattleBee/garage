@@ -6,11 +6,11 @@ import java.util.List;
 
 public interface DetailService {
 
-    List<Detail> getAllDetails();
+    List<Detail> getAll();
 
-    void saveDetail(Detail detail);
+    void save(Detail detail);
 
-    Detail getDetail(int id);
+    Detail get(int id);
 
-    void deleteDetail(int id);
+    void delete(int id);
 }

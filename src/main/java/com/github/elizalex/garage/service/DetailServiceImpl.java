@@ -19,27 +19,27 @@ public class DetailServiceImpl implements DetailService {
 
     @Override
     @Transactional
-    public List<Detail> getAllDetails() {
-        return detailDAO.getAllDetails();
+    public List<Detail> getAll() {
+        return detailDAO.getAll();
     }
 
 
     @Override
     @Transactional
-    public void saveDetail(Detail detail) {
-        detailDAO.saveDetail(detail);
+    public void save(Detail detail) {
+        detailDAO.save(detail);
 
     }
 
     @Override
     @Transactional
-    public Detail getDetail(int id) {
-        return detailDAO.getDetail(id);
+    public Detail get(int id) {
+        return detailDAO.get(id);
     }
 
     @Override
     @Transactional
-    public void deleteDetail(int id) {
-        detailDAO.deleteDetail(id);
+    public void delete(int id) {
+        detailDAO.delete(id);
     }
 }

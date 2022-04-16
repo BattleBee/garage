@@ -17,27 +17,27 @@ public class DetailDAOImpl implements DetailDAO{
     private EntityManager entityManager;
 
     @Override
-    public List<Detail> getAllDetails() {
+    public List<Detail> getAll() {
         Query query = entityManager.createQuery("from Detail");
         List<Detail> allDetails = query.getResultList();
         return allDetails;
     }
 
     @Override
-    public void saveDetail(Detail detail) {
+    public void save(Detail detail) {
         Detail newDetail = entityManager.merge(detail);
         detail.setId(newDetail.getId());
 
     }
 
     @Override
-    public Detail getDetail(int id) {
+    public Detail get(int id) {
         Detail detail = entityManager.find(Detail.class, id);
         return detail;
     }
 
     @Override
-    public void deleteDetail(int id) {
+    public void delete(int id) {
         Query query = entityManager.createQuery("delete from Detail"
                 + "were id = :detail_id"); // создаем  запрос на удаление по id (проверить)
         query.setParameter("detail_id", id); // этот id в параметрах
